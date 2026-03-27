@@ -1,0 +1,71 @@
+{
+  "structural_na_cols": [
+    "PoolQC",
+    "MiscFeature",
+    "Alley",
+    "Fence",
+    "FireplaceQu",
+    "GarageType",
+    "GarageFinish",
+    "GarageQual",
+    "GarageCond",
+    "BsmtQual",
+    "BsmtCond",
+    "BsmtExposure",
+    "BsmtFinType1",
+    "BsmtFinType2",
+    "MasVnrType"
+  ],
+  "true_na_cols": [
+    "LotFrontage",
+    "MasVnrArea",
+    "GarageYrBlt",
+    "Electrical"
+  ],
+  "ordinal_cols": [
+    "ExterQual",
+    "ExterCond",
+    "BsmtQual",
+    "BsmtCond",
+    "HeatingQC",
+    "KitchenQual",
+    "FireplaceQu",
+    "GarageQual",
+    "GarageCond",
+    "PoolQC"
+  ],
+  "high_skew_cols": [
+    "MiscVal",
+    "PoolArea",
+    "LotArea",
+    "3SsnPorch",
+    "LowQualFinSF",
+    "KitchenAbvGr",
+    "BsmtFinSF2",
+    "ScreenPorch",
+    "BsmtHalfBath",
+    "EnclosedPorch",
+    "MasVnrArea",
+    "OpenPorchSF",
+    "LotFrontage",
+    "BsmtFinSF1",
+    "WoodDeckSF",
+    "TotalBsmtSF",
+    "MSSubClass",
+    "1stFlrSF",
+    "GrLivArea",
+    "BsmtUnfSF",
+    "2ndFlrSF"
+  ],
+  "high_cardinality_cols": [
+    "Neighborhood",
+    "Exterior2nd",
+    "Exterior1st",
+    "Condition1",
+    "SaleType",
+    "HouseStyle",
+    "RoofMatl",
+    "Condition2",
+    "Functional"
+  ]
+}

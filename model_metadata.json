@@ -1,0 +1,190 @@
+{
+  "target": "SalePrice_log1p",
+  "train_rows": 945,
+  "test_rows": 513,
+  "cv_summary": [
+    {
+      "model": "Linear Regression",
+      "cv_rmse": 0.11467398322699793,
+      "cv_mae": 0.08069481250117054,
+      "cv_r2": 0.9121146753794745
+    },
+    {
+      "model": "XGBoost",
+      "cv_rmse": 0.11471157357494954,
+      "cv_mae": 0.07955262109879828,
+      "cv_r2": 0.912823262183824
+    },
+    {
+      "model": "Gradient Boosting",
+      "cv_rmse": 0.11814490257722057,
+      "cv_mae": 0.08285602171317379,
+      "cv_r2": 0.9078706658044273
+    },
+    {
+      "model": "Random Forest",
+      "cv_rmse": 0.12971515266884803,
+      "cv_mae": 0.08996295134774615,
+      "cv_r2": 0.8885884510837535
+    },
+    {
+      "model": "Dummy",
+      "cv_rmse": 0.3909513869891818,
+      "cv_mae": 0.304621833351378,
+      "cv_r2": -0.007219578691252071
+    }
+  ],
+  "final_metrics": {
+    "train": {
+      "RMSE": 0.059289907905947785,
+      "MAE": 0.04499607705989068,
+      "R2": 0.976962300991185
+    },
+    "test": {
+      "RMSE": 0.12847775730658745,
+      "MAE": 0.08807855788869448,
+      "R2": 0.9041402492961057
+    }
+  },
+  "top_transformed_features": [
+    {
+      "feature": "QualArea",
+      "mean_abs_shap": 0.0819096788764
+    },
+    {
+      "feature": "TotalSF",
+      "mean_abs_shap": 0.07828755676746368
+    },
+    {
+      "feature": "OverallQual",
+      "mean_abs_shap": 0.04023861512541771
+    },
+    {
+      "feature": "KitchenQual",
+      "mean_abs_shap": 0.021536748856306076
+    },
+    {
+      "feature": "LotArea",
+      "mean_abs_shap": 0.01899755373597145
+    },
+    {
+      "feature": "TotalBaths",
+      "mean_abs_shap": 0.015131961554288864
+    },
+    {
+      "feature": "FireplaceQu",
+      "mean_abs_shap": 0.013907798565924168
+    },
+    {
+      "feature": "QualCondScore",
+      "mean_abs_shap": 0.013303186744451523
+    },
+    {
+      "feature": "YearRemodAdd",
+      "mean_abs_shap": 0.013090438209474087
+    },
+    {
+      "feature": "GarageFinish",
+      "mean_abs_shap": 0.012544183060526848
+    },
+    {
+      "feature": "BsmtFinSF1",
+      "mean_abs_shap": 0.0107552045956254
+    },
+    {
+      "feature": "OverallScore",
+      "mean_abs_shap": 0.010250472463667393
+    },
+    {
+      "feature": "BathsPerBedroom",
+      "mean_abs_shap": 0.00976421870291233
+    },
+    {
+      "feature": "GarageScore",
+      "mean_abs_shap": 0.009731884114444256
+    },
+    {
+      "feature": "OverallCond",
+      "mean_abs_shap": 0.008408844470977783
+    },
+    {
+      "feature": "BsmtFinType1",
+      "mean_abs_shap": 0.008387303911149502
+    },
+    {
+      "feature": "YearBuilt",
+      "mean_abs_shap": 0.008175847120583057
+    },
+    {
+      "feature": "BsmtQual",
+      "mean_abs_shap": 0.007544048596173525
+    },
+    {
+      "feature": "MSZoning_RM",
+      "mean_abs_shap": 0.007241044193506241
+    },
+    {
+      "feature": "TotalBsmtSF",
+      "mean_abs_shap": 0.007036264520138502
+    }
+  ],
+  "best_params": {
+    "model__colsample_bytree": 0.7,
+    "model__learning_rate": 0.05,
+    "model__max_depth": 3,
+    "model__min_child_weight": 3,
+    "model__n_estimators": 300,
+    "model__reg_alpha": 0.1,
+    "model__reg_lambda": 1,
+    "model__subsample": 0.7
+  },
+  "target_encode_cols": [
+    "Neighborhood",
+    "Exterior1st",
+    "Exterior2nd"
+  ],
+  "onehot_cols": [
+    "MSZoning",
+    "Street",
+    "Alley",
+    "LandContour",
+    "LotConfig",
+    "Condition1",
+    "Condition2",
+    "BldgType",
+    "HouseStyle",
+    "RoofStyle",
+    "RoofMatl",
+    "MasVnrType",
+    "Foundation",
+    "Heating",
+    "CentralAir",
+    "Electrical",
+    "GarageType",
+    "MiscFeature",
+    "SaleType",
+    "SaleCondition"
+  ],
+  "ordinal_cols": [
+    "ExterQual",
+    "ExterCond",
+    "BsmtQual",
+    "BsmtCond",
+    "HeatingQC",
+    "KitchenQual",
+    "FireplaceQu",
+    "GarageQual",
+    "GarageCond",
+    "GarageFinish",
+    "BsmtExposure",
+    "BsmtFinType1",
+    "BsmtFinType2",
+    "Functional",
+    "Fence",
+    "PoolQC",
+    "LandSlope",
+    "LotShape",
+    "PavedDrive",
+    "Utilities"
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "rows_before_outlier_removal": 1460,
+  "rows_after_outlier_removal": 1458,
+  "outlier_rule": {
+    "description": "Remove extreme GrLivArea rows with comparatively low sale price",
+    "rule": "(GrLivArea > 4000) & (SalePrice < 300000)",
+    "rows_removed": 2
+  },
+  "structural_na_groups": {
+    "pool_related": [
+      "PoolQC"
+    ],
+    "misc_feature_related": [
+      "MiscFeature"
+    ],
+    "alley_access_related": [
+      "Alley"
+    ],
+    "fence_related": [
+      "Fence"
+    ],
+    "fireplace_related": [
+      "FireplaceQu"
+    ],
+    "garage_related": [
+      "GarageType",
+      "GarageYrBlt",
+      "GarageFinish",
+      "GarageQual",
+      "GarageCond"
+    ],
+    "basement_related": [
+      "BsmtQual",
+      "BsmtCond",
+      "BsmtExposure",
+      "BsmtFinType1",
+      "BsmtFinType2"
+    ],
+    "masonry_related": [
+      "MasVnrType",
+      "MasVnrArea"
+    ]
+  },
+  "true_na_candidates": [
+    "LotFrontage",
+    "Electrical"
+  ],
+  "log_transform_cols": [
+    "LotArea",
+    "3SsnPorch",
+    "LowQualFinSF",
+    "BsmtFinSF2",
+    "ScreenPorch",
+    "EnclosedPorch",
+    "MasVnrArea",
+    "OpenPorchSF",
+    "WoodDeckSF",
+    "LotFrontage",
+    "MSSubClass",
+    "GrLivArea",
+    "BsmtUnfSF",
+    "1stFlrSF",
+    "2ndFlrSF",
+    "BsmtFinSF1"
+  ],
+  "ordinal_cols": [
+    "ExterQual",
+    "ExterCond",
+    "BsmtQual",
+    "BsmtCond",
+    "HeatingQC",
+    "KitchenQual",
+    "FireplaceQu",
+    "GarageQual",
+    "GarageCond",
+    "GarageFinish",
+    "BsmtExposure",
+    "BsmtFinType1",
+    "BsmtFinType2",
+    "Functional",
+    "Fence",
+    "PoolQC",
+    "LandSlope",
+    "LotShape",
+    "PavedDrive",
+    "Utilities"
+  ],
+  "target_encode_cols": [
+    "Neighborhood",
+    "Exterior1st",
+    "Exterior2nd"
+  ],
+  "onehot_cols": [
+    "MSZoning",
+    "Street",
+    "Alley",
+    "LandContour",
+    "LotConfig",
+    "Condition1",
+    "Condition2",
+    "BldgType",
+    "HouseStyle",
+    "RoofStyle",
+    "RoofMatl",
+    "MasVnrType",
+    "Foundation",
+    "Heating",
+    "CentralAir",
+    "Electrical",
+    "GarageType",
+    "MiscFeature",
+    "SaleType",
+    "SaleCondition"
+  ],
+  "engineered_features": [
+    "HouseAge",
+    "RemodAge",
+    "IsRemodeled",
+    "TotalSF",
+    "TotalPorchSF",
+    "TotalBaths",
+    "QualArea",
+    "OverallScore",
+    "QualCondScore",
+    "LiveAreaPerRoom",
+    "FinishedBsmtRatio",
+    "TotalOutdoorSF",
+    "GarageScore",
+    "BathsPerBedroom",
+    "Has2ndFloor",
+    "HasGarage",
+    "HasBasement"
+  ]
+}
